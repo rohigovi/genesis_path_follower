@@ -1,5 +1,29 @@
 # genesis_path_follower
 Code to track a GPS-specified set of waypoints using MPC.  In this branch, the nonlinear kinematic module is used.
+
+**ROHIT GOVINDAN'S DATA VISUALIZATION CHANGES**  
+---
+I have added code to extract performance parameters from the controller simulation rosbag and plotted them in real time in a series of matplotlib plots.  
+<br />
+My Code Changes do the following:  
+<br />
+1.)Writing a “Display State” message file to store relevant parameters(current velocity, path tracking error, heading error, etc.). Implementing subscriber and publisher nodes in the “lanekeeping” and “gpsvehicleplotter” files.  
+<br />
+2.) Creating an overall vehicle path plot with a visually appealing "Zoom" feature(top left plot in the demo)  
+<br />
+3.)Creating other plot objects to display velocity error vs displacement, path tracking error vs displacement and the expected velocity vs displacement. Modifying code to convert plots to “Scrolling” plots.  
+<br />
+Here is a DEMO of the plots - they are updated in real time as the vehicle moves along it's path.  
+<br />
+The full plot video and my research presentation on the same can be found on my website(Project 02) - https://rohitgovindan.wixsite.com/gettoknowme/projects-1 
+![](demo.gif)  
+
+
+
+
+
+
+**DETAILED OVERVIEW OF REPOSITORY**
 ---
 There are three major launch files to use:
   * path_record.launch
